@@ -1,0 +1,358 @@
+#private-chat {
+	background-color: #fff;
+	border: 1px solid #d9d9d9;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+
+#private-chat .msgitem {
+	display: flex;
+	width: 90%;
+	margin-left: 5%;
+	position: relative;
+	min-height: 40px;
+}
+
+#private-chat .msgitem .username {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid deepskyblue;
+	border-radius: 10%;
+}
+
+#private-chat .msgitem .msg {
+	background-color: #fff;
+}
+
+#private-chat .msgitem .selfmsg {
+	background-color: #fff;
+	position: absolute;
+	right: 30px;
+}
+
+#private-chat .msgitem .self {
+	position: absolute;
+	right: 0;
+}
+
+
+
+
+.chat-min {
+	position: fixed;
+	left: 25%;
+	bottom: 0px;
+	width: 200px;
+	height: 50px;
+	border: 1px solid #D9D9D9;
+	box-shadow: 1px 1px 50px rgba(0, 0, 0, .3);
+	border-radius: 2px;
+}
+
+.chat-min .chat-min-currect-user {
+
+	padding-left: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.chat-min .chat-min-currect-user .header_img {
+	width: 40px;
+	height: 40px;
+	cursor: move;
+	position: relative;
+}
+
+.chat-min .chat-min-currect-user .header_img .mask {
+	width: 40px;
+	height: 40px;
+	cursor: move;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.chat-min .chat-min-currect-user .header_img img {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.chat-min .chat-min-currect-user .user-name {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10px;
+	font-size: 16px;
+	cursor: default;
+}
+
+
+
+
+.col-2 {
+	width: 20%;
+}
+
+.col-3 {
+	width: 30%;
+}
+
+.col-4 {
+	width: 40%;
+}
+
+.col-5 {
+	width: 50%;
+}
+
+.online {
+	background-color: #3FDD86;
+}
+
+.hide {
+	background-color: #DD691D;
+}
+
+.chat-user-box .information .self .close {
+	position: absolute;
+	right: 10px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.chat-user-box .information .personal-signature {
+	padding-left: 15px;
+	font-size: 14px;
+}
+
+.chat-user-box .information .personal-signature .remark {
+	position: relative;
+	left: -6px;
+	display: block;
+	width: 100%;
+	border: 1px solid transparent;
+	height: 26px;
+	line-height: 26px;
+	background: 0 0;
+	border-radius: 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.chat-user-box .information .personal-signature .remark:focus {
+	background-color: #fff;
+}
+
+.chat-user-box .information .personal-signature .remark:focus,
+.chat-user-box .information .personal-signature .remark:hover {
+	border: 1px solid #d2d2d2;
+	border-color: rgba(0, 0, 0, .15);
+}
+
+.chat-user-box .information .classify-tab {
+	width: 100%;
+	height: 34px;
+}
+
+.chat-user-box .information .classify-tab .tabs {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.chat-user-box .information .classify-tab .tabs .each-tab {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.chat-user-box .information .classify-tab .tabs .each-tab.active span,
+.chat-user-box .information .classify-tab .tabs .each-tab span:hover {
+	color: deepskyblue;
+}
+
+.chat-user-box .information .classify-tab .tabs .each-tab.active {
+	border-bottom: 2px solid #3FDD86;
+}
+
+/* 好友列表 */
+.chat-user-box .friends-list {
+	width: 100%;
+	height: 370px;
+	overflow-y: scroll;
+}
+
+.chat-user-box .friends-list {
+	width: 100%;
+	height: 370px;
+	overflow-y: scroll;
+}
+
+.chat-user-box .friends-list .group-list-item {
+	display: none;
+}
+
+.chat-user-box .friends-list .group-list-item.show {
+	display: block;
+}
+
+.chat-user-box .friends-list .group {
+	width: 100%;
+}
+
+.chat-user-box .friends-list .group .group-name {
+	cursor: pointer;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+
+.chat-user-box .friends-list .group .group-name .zhankai {
+	margin-left: 10px;
+	color: #999;
+}
+
+.chat-user-box .friends-list .group .group-name .zhankai.toright {
+	transform: rotate(-90deg);
+}
+
+.chat-user-box .friends-list .group .group-name .title-name {}
+
+.chat-user-box .friends-list .group .group-list {
+	width: 100%;
+	display: none;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item {
+	width: 100%;
+	display: flex;
+	height: 50px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item:hover {
+	background-color: rgba(0, 0, 0, .05);
+}
+
+.chat-user-box .friends-list .group .group-list .list-item .headimg {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item .headimg img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item .simple-info {
+	width: 80%;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item .simple-info .name {
+	font-size: 14px;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+}
+
+.chat-user-box .friends-list .group .group-list .list-item .simple-info .gxqm {
+	font-size: 12px;
+	width: 90%;
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 群组 */
+.chat-user-box .friends-list .groups {}
+
+.chat-user-box .friends-list .groups .list-item {
+	width: 100%;
+	display: flex;
+	height: 50px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+
+.chat-user-box .friends-list .groups .list-item:hover {
+	background-color: rgba(0, 0, 0, .05);
+}
+
+.chat-user-box .friends-list .groups .list-item .headimg {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chat-user-box .friends-list .groups .list-item .headimg img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+}
+
+.chat-user-box .friends-list .groups .list-item .simple-info {
+	width: 80%;
+}
+
+.chat-user-box .friends-list .groups .list-item .simple-info .name {
+	font-size: 14px;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+}
+
+.chat-user-box .friends-list .groups .list-item .simple-info .gxqm {
+	font-size: 12px;
+	width: 90%;
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.chat-user-box .bt-tools {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	background-color: #f6f6f6;
+	border-top: 1px solid #9e9e9e47;
+}
+
+.chat-user-box .bt-tools .icon-bt {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}

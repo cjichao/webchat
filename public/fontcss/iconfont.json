@@ -1,0 +1,86 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "338310",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "1092116",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "4641126",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "5358535",
+      "name": "缩小",
+      "font_class": "suoxiao",
+      "unicode": "e7ad",
+      "unicode_decimal": 59309
+    },
+    {
+      "icon_id": "7006868",
+      "name": "音频",
+      "font_class": "yinpin",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "7090081",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e71a",
+      "unicode_decimal": 59162
+    },
+    {
+      "icon_id": "7903667",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "8501463",
+      "name": "视频",
+      "font_class": "shipin_huabanfuben",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "10028196",
+      "name": "关闭",
+      "font_class": "guanbi1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "16364332",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "16401921",
+      "name": "记录",
+      "font_class": "biaoqiankuozhan_jilu-378",
+      "unicode": "ebeb",
+      "unicode_decimal": 60395
+    }
+  ]
+}

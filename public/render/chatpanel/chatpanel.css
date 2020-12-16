@@ -1,0 +1,324 @@
+#private-chat .choiceUserList {
+
+	background-color: #d9d9d9;
+}
+
+#private-chat .choiceUserList .choiceUserList-ul {
+	max-height: 520px;
+	padding-top: 2%;
+	overflow-y: auto;
+}
+
+#private-chat .choiceUserList .choiceUserList-ul li {
+	width: 200px;
+}
+
+::-webkit-scrollbar {
+	display: none
+}
+
+#private-chat .choiceUserList .one-user {
+	cursor: pointer;
+	width: 96%;
+	margin-bottom: 2%;
+	height: 60px;
+	display: flex;
+	border-radius: 4px;
+	margin-left: 2%;
+	position: relative;
+}
+
+#private-chat .choiceUserList .one-user:hover {
+	background-color: #e2e2e2;
+}
+
+#private-chat .choiceUserList .one-user.choice {
+	background-color: #f3f3f3;
+}
+
+#private-chat .choiceUserList .one-user .image {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#private-chat .choiceUserList .one-user .image .headerImg {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+#private-chat .choiceUserList .one-user .username {
+	width: 120px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	padding-left: 5px;
+}
+
+#private-chat .choiceUserList .one-user .close {
+	display: none;
+}
+
+#private-chat .choiceUserList .one-user:hover .close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+#private-chat .choiceUserList .one-user:hover .close:hover .iconfont {
+	color: #c00;
+}
+
+/* 主聊天框 */
+#private-chat .chat-main {
+	width: 600px;
+	height: 100%;
+}
+
+#private-chat .chat-main .title {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	background-color: rgba(245, 245, 245, .7);
+	cursor: move;
+}
+
+#private-chat .chat-main .title .head-portrait {
+	width: 80px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: default;
+}
+
+#private-chat .chat-main .title .head-portrait img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+#private-chat .chat-main .title .username {
+	height: 80px;
+	font-size: 20px;
+	cursor: default;
+}
+
+#private-chat .chat-main .title .username .name {
+	height: 30px;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+#private-chat .chat-main .title .username .isonline {
+	height: 50px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #ff5722;
+}
+
+#private-chat .chat-main .title .operate {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	position: absolute;
+	right: 0;
+	padding-top: 10px;
+}
+
+#private-chat .chat-main .title .operate .bt {
+	width: 25px;
+	cursor: pointer;
+}
+
+/* 聊天內容 */
+#private-chat .chat-main .content {
+	width: 100%;
+	height: 280px;
+	overflow-y: scroll;
+}
+
+#private-chat .chat-main .content .row {
+	width: 100%;
+	margin-top: 10px;
+}
+
+#private-chat .chat-main .content .row .news {
+	width: 100%;
+}
+
+#private-chat .chat-main .content .row .news.friend {
+	margin-left: 2%;
+}
+
+#private-chat .chat-main .content .row .news.self {
+	margin-left: -2%;
+}
+
+#private-chat .chat-main .content .row .news .headerimg {
+	width: 40px;
+	height: 40px;
+}
+
+#private-chat .chat-main .content .row .news.friend .headerimg {
+	float: left;
+}
+
+#private-chat .chat-main .content .row .news.self .headerimg {
+	float: right;
+}
+
+#private-chat .chat-main .content .row .news .headerimg img {
+	width: 40px;
+	height: 40px;
+}
+
+#private-chat .chat-main .content .row .news.friend .message::before {
+	content: '';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: -20px;
+	top: 10px;
+	border: 10px solid;
+	border-color: transparent #eee transparent transparent;
+}
+
+#private-chat .chat-main .content .row .news.self .message::after {
+	content: '';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: 100%;
+	top: 10px;
+	border: 10px solid;
+	border-color: transparent transparent transparent #eee;
+}
+
+#private-chat .chat-main .content .row .news .message {
+	position: relative;
+	background-color: #eee;
+	max-width: 300px;
+	min-height: 40px;
+	padding: 5px;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	word-break: break-all;
+}
+
+#private-chat .chat-main .content .row .news.friend .message {
+	float: left;
+	margin-left: 20px;
+}
+
+#private-chat .chat-main .content .row .news.self .message {
+	float: right;
+	margin-right: 20px;
+}
+
+
+
+#private-chat .chat-main .content .row .news::after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+#private-chat .chat-main .input-box {
+	width: 100%;
+	height: 158px;
+	border-top: 1px solid #F1F1F1;
+	;
+}
+
+#private-chat .chat-main .input-box .select-bts {
+	height: 38px;
+	display: flex;
+}
+
+#private-chat .chat-main .input-box .select-bts .icon-bt {
+	height: 100%;
+	display: flex;
+	position: relative;
+}
+
+#private-chat .chat-main .input-box .select-bts .icon-bt .icon {
+	height: 100%;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#private-chat .chat-main .input-box .select-bts .record {
+	position: absolute;
+	right: 10px;
+	display: flex;
+	cursor: pointer;
+}
+
+#private-chat .chat-main .input-box .select-bts .record .icon {}
+
+#private-chat .chat-main .input-box .select-bts .record .text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#private-chat .chat-main .input-box .input-textarea {
+	height: 73px;
+	padding: 4px;
+}
+
+#private-chat .chat-main .input-box .input-textarea textarea {
+	display: block;
+	width: 100%;
+	padding: 5px 0 0;
+	height: 68px;
+	line-height: 20px;
+	border: none;
+	overflow: auto;
+	resize: none;
+	background: 0 0;
+}
+
+#private-chat .chat-main .input-box .input-footer {
+	height: 46px;
+	position: relative;
+}
+
+#private-chat .chat-main .input-box .input-footer .bts-send {
+	display: flex;
+	width: 170px;
+	position: absolute;
+	right: 10px;
+}
+
+#private-chat .chat-main .input-box .input-footer .bts-send .bt {
+	cursor: pointer;
+	background-color: #5FB878;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 3px;
+	padding: 0 20px;
+	color: #fff;
+	font-size: 14px;
+}

@@ -1,0 +1,11 @@
+[{
+	"groupName": "知名人物",
+	"friends": [{
+		"userid": "00008888",
+		"username": "大李子",
+		"headImg": "./img/header.png",
+		"isOnline": true,
+		"gxqm": "在深邃的编码世界，做一枚轻盈的纸飞机",
+		"hasChat": false
+	}]
+}]

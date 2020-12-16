@@ -1,0 +1,67 @@
+.register-box {
+	width: 300px;
+	height: 250px;
+	background-color: #eee;
+	border-radius: 4px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.register-box .zhanwei {
+	width: 100%;
+	height: 30px;
+}
+
+.register-box .zhanwei.header {
+	cursor: move;
+}
+
+.register-box .user-info {
+	width: 100%;
+	height: 150px;
+	position: relative;
+}
+
+.register-box .user-info .row {
+	margin-left: 10%;
+	width: 80%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.register-box .user-info .row .text{
+	width: 30%;
+}
+.register-box .user-info .row .input{
+	width: 70%;
+}
+
+.register-box .bts {
+	height: 50px;
+	width: 80%;
+	display: flex;
+	margin-left: 10%;
+}
+
+.register-box .bts .bt-col {
+	width: 50%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.register-box .bts .bt-col .bt {
+	width: 50%;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	background-color: #00BFFF;
+	border-radius: 4px;
+	cursor: pointer;
+}

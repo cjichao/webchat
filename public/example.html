@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>chat</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/chat.css" />
+		<link rel="stylesheet" href="css/groupchat.css" />
+		<link rel="stylesheet" href="./fontcss/iconfont.css">
+		<link rel="stylesheet" href="./fontcss/iconfont2.css">
+		<link rel="stylesheet" href="./render/loginpanel/loginpanel.css">
+		<link rel="stylesheet" href="./render/registerpanel/registerpanel.css">
+		<link rel="stylesheet" href="./render/mainpanel/mainpanel.css">
+		<link rel="stylesheet" href="./render/chatpanel/chatpanel.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/io.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./render/loginpanel/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./render/registerpanel/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./render/mainpanel/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./render/chatpanel/index.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#count {
+				color: red;
+			}
+
+			#userList {}
+
+			#userList .userItem {
+				width: 100px;
+				height: 30px;
+				cursor: pointer;
+			}
+
+			#userList .userItem.choiced {
+				color: #00BFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <div>
+			<input type="text" value='' id='username'>
+			<button onclick='login()'>登录</button>
+			<h1>当前在线人数：<span id='count'>0</span>人</h1>
+			<ul id="userList">
+				<li class="userItem">1</li>
+			</ul>
+			<input type="text" value='' id='msg'>
+			<button onclick="send()">发送</button>
+		</div> -->
+		<!-- <div id='message'> -->
+			<!-- <div class="msgitem">
+				<div class='selfmsg'>ssssssss</div>
+				<div class='self'>cjc</div>
+			</div> -->
+		<!-- </div> -->
+<!-- npm i socket.io@2.3.0 --save -->
+		<!-- 缩小框 -->
+		<div id='private-chat-min' class='chat-min'>
+			<div class='chat-min-currect-user'>
+				<div class="header_img">
+					<div class="mask"></div>
+					<img src="img/header.png">
+				</div>
+				<div class="user-name">小李子</div>
+			</div>
+		</div>
+		<!-- 登录框 -->
+		<div id='login-panel'></div>
+		<!-- 注册框 -->
+		<div id='register-panel'></div>
+		<!-- 聊天框 -->
+		<div id='chat-panel'></div>
+		<!-- 主列表 -->
+		<div id='main-panel'></div>
+
+		<script type="text/javascript">
+			// http://127.0.0.1:8800/example.html
+			// http://192.168.80.85:8800/example.html
+			moveDom($('.mask')[0], $('#private-chat-min')[0])
+
+
+			$('body').on('click', '#small-bt-choice-online', function() {
+				$('.select-panel').fadeToggle(200);
+			})
+
+			// function login(){
+			// 	$.ajax({
+			// 		type:'post',
+			// 		url:host + '/chat/test',
+			// 		data:{
+			// 			aa:'abcdefg'
+			// 		},
+			// 		success(data){
+			// 			console.log(data)
+			// 		},
+			// 		error(err){
+			// 			console.log(err)
+			// 		}
+			// 	})
+			// }
+
+			// var msgDom = $('#msg');
+			// var countDom = $('#count');
+			// var messageDom = $("#message");
+			// var userListDom = $('#userList');
+			// var toPerson = '';
+
+			// userListDom.on('click', '.userItem', function() {
+			// 	var $this = $(this);
+			// 	var res = $this.hasClass('choiced');
+			// 	$('.userItem').removeClass('choiced');
+			// 	if (res) {
+			// 		$this.removeClass('choiced');
+			// 		toPerson = '';
+			// 	} else {
+			// 		$this.addClass('choiced');
+			// 		toPerson = $this.attr('socketid');
+			// 	}
+			// })
+			// function bt() {
+			// 	$.ajax({
+			// 		url: '/get/a',
+			// 		data: {
+			// 			userid: '11',
+			// 			password: '123456'
+			// 		},
+			// 		success: function(res) {
+			// 			console.log(res)
+			// 		}
+			// 	})
+			// }
+			// var user = {
+			// 	userid: Date.now(),
+			// 	username: 'aa',
+			// 	age: 19
+			// }
+
+			// function login() {
+			// 	var name = $('#username').val();
+			// 	if (name.trim() == '') {
+			// 		return;
+			// 	}
+			// 	user.username = name;
+			// 	socket.emit('login', user);
+			// }
+
+			// socket.on('login', function(obj) {
+			// 	online(obj, '上');
+			// });
+
+			// socket.on('logout', function(obj) {
+			// 	online(obj, '下');
+			// });
+
+			// function online(obj, type) {
+			// 	var count = obj.onlineCount; //在线人数
+			// 	var who = obj.user.username; //退出的用户
+			// 	var socketId = obj.socketId; //用户的socketId
+			// 	countDom.text(count);
+			// 	console.log(who + type + '线啦');
+			// 	if (type == '上') {
+			// 		var $li = $('<li class="userItem">' + who + '</li>');
+			// 		$li.attr('socketid', socketId);
+			// 		userListDom.append($li);
+			// 	} else {
+			// 		var $lis = $('.userItem');
+			// 		console.log($lis)
+			// 		for (var i = 0, len = $lis.length; i < len; i++) {
+			// 			var $item = $($lis[i]);
+			// 			console.log($item.attr('socketid'), String(socketId))
+			// 			if ($item.attr('socketid') == String(socketId)) {
+			// 				$item.remove();
+			// 				return;
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			// function send() {
+			// 	var msg = msgDom.val();
+			// 	msgDom.val('');
+			// 	socket.emit('message', {
+			// 		username: user.username,
+			// 		content: msg
+			// 	});
+			// 	var $msg = $('<div class="msgitem">' +
+			// 		'<div class="selfmsg">' + msg + '</div>' +
+			// 		'<div class="self">' + user.username + '</div>' +
+			// 		'</div>');
+			// 	messageDom.append($msg);
+			// }
+			// socket.on('message', function(obj) {
+			// 	console.log(obj)
+			// 	if (obj.id == user.userid) {
+			// 		return;
+			// 	}
+			// 	var username = obj.username;
+			// 	var msg = obj.content;
+			// 	var $msg = $('<div class="msgitem">' +
+			// 		'<div class="username">' + username + '</div>' +
+			// 		'<div class="msg">' + msg + '</div>' +
+			// 		'</div>');
+			// 	messageDom.append($msg);
+			// });
+
+			// function sendToOrderPerson() {
+			// 	socket.emit('toOrderPerson', function(obj) {
+			// 		var socketid = obj.
+			// 		// 发送给指定的人
+			// 		io.sockets.socket(socketid).emit('message', 'for your eyes only');
+			// 	});
+			// }
+			// // 私聊
+			// socket.on('toYou', function(obj) {
+
+			// });
+		</script>
+	</body>
+</html>

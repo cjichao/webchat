@@ -1,0 +1,126 @@
+<!-- 列表 -->
+<div id='chat-box' class='chat-user-box'>
+	<div class="information">
+		<div class="self clearfix move">
+			<div class="img" title='头像'>
+				<img src="">
+			</div>
+			<div class="name"></div>
+			<div class="online_status">
+				<div class='circ ' id='small-bt-choice-online'></div>
+				<div class='select-panel'>
+					<div class="select-item">
+						<div class="col-3 item">
+							<input id='online_radio' type="radio" name='isonline' value='online' />
+						</div>
+						<div class="col-2 item">
+							<div class="circ online"></div>
+						</div>
+						<div class="col-4 item">
+							<span>在线</span>
+						</div>
+					</div>
+					<div class="select-item">
+						<div class="col-3 item">
+							<input id='hide_radio' type="radio" name='isonline' value='hide' />
+						</div>
+						<div class="col-2 item">
+							<div class="circ hide"></div>
+						</div>
+						<div class="col-4 item">
+							<span>隐身</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="close pointer" title='退出登录'>
+				<span class="iconfont iconfont-size20 icon-guanbi1"></span>
+			</div>
+		</div>
+		<div class="personal-signature">
+			<input class="remark" placeholder="编辑签名" value="">
+		</div>
+		<div class="classify-tab">
+			<ul class="tabs">
+				<li class="each-tab active" data-id='friend-group' title='联系人'>
+					<span class="iconfont iconfont-size20 icon-yonghu"></span>
+				</li>
+				<li class="each-tab" data-id='group-group' title='群组'>
+					<span class="iconfont iconfont-size20 icon-qunzu"></span>
+				</li>
+				<li class="each-tab" data-id='message-group' title='历史会话'>
+					<span class="iconfont iconfont-size20 icon-dangqianhuihua"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="friends-list">
+		<div id='friend-group' class='group-list-item show'>
+
+		</div>
+		<div id='group-group' class='group-list-item'>
+			<div class="groups">
+				<ul>
+					<!-- <li>
+						<div class="list-item">
+							<div class='headimg'>
+								<img src='./img/header.png'>
+							</div>
+							<div class="simple-info">
+								<div class="name">前端群</div>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<div id='message-group' class='group-list-item'>
+			<div class="groups">
+				<ul>
+					<!-- <li>
+						<div class="list-item">
+							<div class='headimg'>
+								<img src='./img/header.png'>
+							</div>
+							<div class="simple-info">
+								<div class="name">马云</div>
+								<div class='gxqm'>这个是个性签名</div>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bt-tools">
+		<div class="icon-bt">
+			<span title='搜索' class="iconfont iconfont-size28 icon-sousuo"></span>
+		</div>
+		<div class="icon-bt">
+			<span title='消息盒子' class="iconfont iconfont-size32 icon-web-icon-"></span>
+		</div>
+		<div class="icon-bt">
+			<span title='查找' class="iconfont iconfont-size25 icon-gengduo"></span>
+		</div>
+		<div class="icon-bt">
+			<span title='更换背景' class="iconfont iconfont-size25 icon-pifu"></span>
+		</div>
+		<div class="icon-bt">
+			<span title='关于' class="iconfont iconfont-size32 icon-guanyu"></span>
+		</div>
+	</div>
+</div>
+
+
+<div id='uploaddom' class="upload">
+	<div id='imgbox' class="box">
+		<div class="filebox">
+			<div class="mask"></div>
+			<input type="file" id='file' class="file" />
+		</div>
+	</div>
+	<div class="tool">
+		<div class="bt off">关闭</div>
+		<div class="bt up">上传</div>
+	</div>
+</div>

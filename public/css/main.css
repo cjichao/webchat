@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	outline: 0;
+}
+
+.clearfix:after {
+	/*伪元素是行内元素 正常浏览器清除浮动方法*/
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	*zoom: 1;
+	/*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+}
+
+.move {
+	cursor: move;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.default {
+	cursor: default;
+}
+
+.iconfont-size20 {
+	font-size: 20px;
+}
+
+.iconfont-size21 {
+	font-size: 21px;
+}
+
+.iconfont-size22 {
+	font-size: 22px;
+}
+
+.iconfont-size23 {
+	font-size: 23px;
+}
+
+.iconfont-size24 {
+	font-size: 24px;
+}
+
+.iconfont-size25 {
+	font-size: 25px;
+}
+
+.iconfont-size26 {
+	font-size: 27px;
+}
+
+.iconfont-size27 {
+	font-size: 27px;
+}
+
+.iconfont-size28 {
+	font-size: 28px;
+}
+
+.iconfont-size29 {
+	font-size: 29px;
+}
+
+.iconfont-size30 {
+	font-size: 30px;
+}
+
+.iconfont-size31 {
+	font-size: 31px;
+}
+
+.iconfont-size32 {
+	font-size: 32px;
+}
